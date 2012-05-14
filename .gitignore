@@ -1,0 +1,11 @@
+.idea
+*.iml
+out
+Examples/dbBenchmark/local.properties
+Examples/dbBenchmark/bin
+Examples/dbBenchmark/gen
+Examples/dbBenchmark/dbBenchmark.iml
+Examples/demoSmall/local.properties
+Examples/demoSmall/bin
+Examples/demoSmall/gen
+Examples/demoSmall/demoSmall.iml
