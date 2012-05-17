@@ -9,3 +9,8 @@ Examples/demoSmall/local.properties
 Examples/demoSmall/bin
 Examples/demoSmall/gen
 Examples/demoSmall/demoSmall.iml
+Examples/dbMultiTable/local.properties
+Examples/dbMultiTable/bin
+Examples/dbMultiTable/gen
+Examples/dbMultiTable/demoSmall.iml
+
