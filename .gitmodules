@@ -1,3 +1,4 @@
 [submodule "YodaLib"]
 	path = YodaLib
-	url = git@github.com:edofic/YodaLib.git
+	url = git://github.com/edofic/YodaLib.git
+
