@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.edofic.yodalib.location.ManagedLocator;
 import com.edofic.yodalib.ui.AsyncLoader;
 
-public class Location extends Activity {
+public class Main extends Activity {
     private ManagedLocator locator;
     private AsyncLoader loader;
     private TextView currentLocation;
@@ -30,7 +30,7 @@ public class Location extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        //init locator for updates every minute with initialisation if last known location is not older than a day
+        //init locator for updates every minute with initialization if last known location is not older than a day
         locator = new ManagedLocator(this, locationUpdates, ManagedLocator.ONE_MINUTE, true, true, ManagedLocator.ONE_DAY);
 
         loader.load();
