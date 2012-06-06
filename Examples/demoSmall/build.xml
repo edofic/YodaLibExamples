@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2012 Andraz Bajt
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <project name="SmallDemos" default="help">
 
     <!-- The local.properties file is created and updated by the 'android' tool.
          It contains the path to the SDK. It should *NOT* be checked into
          Version Control Systems. -->
-    <property file="local.properties" />
+    <property file="local.properties"/>
 
     <!-- The ant.properties file can be created by you. It is only edited by the
          'android' tool to add properties to it.
@@ -26,7 +41,7 @@
          application and should be checked into Version Control Systems.
 
          -->
-    <property file="ant.properties" />
+    <property file="ant.properties"/>
 
     <!-- The project.properties file is created and updated by the 'android'
          tool, as well as ADT.
@@ -37,13 +52,13 @@
 
          This file is an integral part of the build system for your
          application and should be checked into Version Control Systems. -->
-    <loadproperties srcFile="project.properties" />
+    <loadproperties srcFile="project.properties"/>
 
     <!-- quick check on sdk.dir -->
     <fail
             message="sdk.dir is missing. Make sure to generate local.properties using 'android update project' or to inject it through an env var"
             unless="sdk.dir"
-    />
+            />
 
     <!--
         Import per project custom build rules if present at the root of the project.
@@ -57,7 +72,7 @@
             -post-build
             -pre-clean
     -->
-    <import file="custom_rules.xml" optional="true" />
+    <import file="custom_rules.xml" optional="true"/>
 
     <!-- Import the actual build file.
 
@@ -78,6 +93,6 @@
          in order to avoid having your file be overridden by tools such as "android update project"
     -->
     <!-- version-tag: 1 -->
-    <import file="${sdk.dir}/tools/ant/build.xml" />
+    <import file="${sdk.dir}/tools/ant/build.xml"/>
 
 </project>
