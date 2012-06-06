@@ -1,4 +1,4 @@
-YodaLibExamples version 0.2
+YodaLibExamples version 0.3
 ================
     
 dbBenchmark
