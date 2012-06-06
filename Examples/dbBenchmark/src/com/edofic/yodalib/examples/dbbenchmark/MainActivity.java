@@ -27,7 +27,18 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
 
         dm = new DatasourceManual(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         da = new Datasource<Person>(this, Person.class);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        da.close();
     }
 
     public void insertSingleManual(View v) {
@@ -75,7 +86,7 @@ public class MainActivity extends Activity {
 
     public void insertSingle(View v) {
         long start = System.currentTimeMillis();
-        da.insertSingle(new Person(0, "auto", -1));
+        da.insert(new Person(0, "auto", -1));
         long stop = System.currentTimeMillis();
         Toast.makeText(this, (stop - start) + "ms", Toast.LENGTH_LONG).show();
     }
@@ -89,7 +100,6 @@ public class MainActivity extends Activity {
         }
         da.transactionSuccessful();
         da.endTransaction();
-        da.close();
         long stop = System.currentTimeMillis();
         Toast.makeText(this, (stop - start) + "ms", Toast.LENGTH_LONG).show();
     }

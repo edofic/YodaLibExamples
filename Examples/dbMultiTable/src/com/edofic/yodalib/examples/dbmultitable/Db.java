@@ -15,12 +15,22 @@ public class Db extends Database {
     public static final String name = "test.db";
     public static final int version = 2;
 
-    @TableDatasource
-    public final Datasource<Person> persons = new Datasource<Person>(this, Person.class);
-    @TableDatasource
-    public final Datasource<Product> products = new Datasource<Product>(this, Product.class);
+    @TableDatasource(injectForType = Person.class)
+    public Datasource<Person> persons;
+    @TableDatasource(injectForType = Product.class)
+    public Datasource<Product> products;
 
     public Db(Context context) {
         super(context, name, version);
+    }
+
+    /**
+     * closes both datasources
+     * renders Db object useless as any calls to member datasources
+     * will throw exceptions
+     */
+    public void close() {
+        persons.close();
+        products.close();
     }
 }
