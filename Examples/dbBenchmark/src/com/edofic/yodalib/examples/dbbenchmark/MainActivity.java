@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        da = new Datasource<Person>(this, Person.class);
+        da = Datasource.create(this, Person.class);
     }
 
     @Override
